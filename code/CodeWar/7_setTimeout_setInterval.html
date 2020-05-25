@@ -1,0 +1,32 @@
+<script>
+    //-----------------------------
+    //-----------------------------
+    function printNumbers(from, to) {
+        let id = setInterval(() => {
+            console.log(from);
+            if (from === to) {
+                clearInterval(id);
+            }
+            from++;
+        }, 1000);
+    }
+
+    printNumbers(1,3)
+
+
+    function printNumbersrecursiv(from, to) {
+        let id = setTimeout(function f() {
+            console.log(from);
+            id = setTimeout(f, 1000);
+            if (from === to) {
+                clearInterval(id);
+            }
+            from++;
+        }, 1000)
+    }
+
+    printNumbersrecursiv(1, 3)
+    //-----------------------------
+    //-----------------------------
+
+</script>

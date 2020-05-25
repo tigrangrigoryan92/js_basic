@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    let arr = [5, 3, 8, 1];
+
+    function filterRange(arr, start, end) {
+        let newArr = [];
+        arr.map(item => {
+            if (item >= start && item <= end) {
+                newArr.push(item);
+            }
+        });
+        return newArr;
+
+        // return arr.filter(item => (a <= item && item <= b));
+    }
+
+    let arr2 = filterRange(arr, 1,4);
+    console.log(arr2);
+</script>
+</body>
+</html>

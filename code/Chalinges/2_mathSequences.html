@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function mathSequences(arr) {
+        let arith = new Set();
+        let geo = new Set();
+
+        for (let i = 1; i < arr.length; i++) {
+            let num1 = arr[i] - arr[i - 1];
+            arith.add(num1);
+
+            let num2 = arr[i] / arr[i - 1];
+            geo.add(num2);
+        }
+
+        if (arith.size === 1) {
+            return "Arithmetic"
+        }
+        if (geo.size === 1) {
+            return "Geometric";
+        }
+        return  -1;
+
+    }
+
+    let arr1 = [2, 4, 6, 8];
+    let arr2 = [3, 9, 27];
+    let arr3 = [1, 6, 9, 5];
+
+    console.log(mathSequences(arr1));
+    console.log(mathSequences(arr2));
+    console.log(mathSequences(arr3));
+
+</script>
+</body>
+</html>

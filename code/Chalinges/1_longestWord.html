@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="`en`">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        function theLongestWord(string) {
+            let words = string.split(' ');
+            let size = 0;
+            let max = [" "];
+
+            for (let i = 0; i < words.length; i++) {
+                if (words[i].length >= size) {
+                    size = words[i].length;
+                    if (max[max.length - 1].length < words[i].length) {
+                        max = [];
+                        max.push(words[i]);
+                    } else {
+                        max = [...max,words[i]];
+                    }
+                }
+            }
+            return [...max];
+        }
+
+        let str1 = "I learn JavaScript.";
+        let str2 = "Try to find the longest word";
+        console.log(theLongestWord(str1));
+        console.log(theLongestWord(str2));
+
+
+
+    </script>
+
+</body>
+
+</html>

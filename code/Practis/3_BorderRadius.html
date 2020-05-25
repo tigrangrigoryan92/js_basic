@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #box {
+            margin-left: 20px;
+            margin-top: 20px;
+            width: 200px;
+            height: 200px;
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<p> Top Left Corner
+    <input type="range" min="0" max="100" value="0" id="rtl" oninput="f1()">
+    <input type="text" value="0" id="ttl">
+</p>
+<p>Top Right Corner
+    <input type="range" min="0" max="100" value="0" id="rtr" oninput="f1()">
+    <input type="text" value="0" id="ttr">
+</p>
+<p> Bottom Left Corner
+    <input type="range" min="0" max="100" value="0" id="rbr" oninput="f1()">
+    <input type="text" value="0" id="tbr">
+</p>
+<p> Bottom Right Corner
+    <input type="range" min="0" max="100" value="0" id="rbl" oninput="f1()">
+    <input type="text" value="0" id="tbl">
+</p>
+<div id="box"></div>
+
+<script>
+    function f1() {
+        let  box = document.getElementById("box");
+
+        let rtl = document.getElementById("rtl").value;
+        let ttl = document.getElementById("ttl");
+
+        let rtr = document.getElementById("rtr").value;
+        let ttr = document.getElementById("ttr");
+
+        let rbr = document.getElementById("rbr").value;
+        let tbr = document.getElementById("tbr");
+
+        let rbl = document.getElementById("rbl").value;
+        let tbl = document.getElementById("tbl");
+
+        ttl.value = rtl;
+        ttr.value = rtr;
+        tbr.value = rbr;
+        tbl.value = rbl;
+
+        box.style.borderRadius = rtl + "px " + rtr + "px " + rbr + "px " + rbl + "px ";
+    }
+
+</script>
+</body>
+</html>

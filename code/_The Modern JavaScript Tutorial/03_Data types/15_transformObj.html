@@ -1,0 +1,30 @@
+<script>
+    let vasya = { name: "Vasya", surname: "Pupkin", id: 1 };
+    let petya = { name: "Petya", surname: "Ivanov", id: 2 };
+    let masha = { name: "Masha", surname: "Petrov", id: 3 };
+
+    let users = [ vasya, petya, masha ];
+
+    function transformObj(arr) {
+        // item.fullName = `${item.name} ${item.surname}`
+        let result = arr.slice() ;
+        for (let obj of arr) {
+            obj.fullName = `${obj.name} ${obj.surname}`;
+            delete obj.name;
+            delete obj.surname;
+        }
+        return result;
+    }
+    let obj = transformObj(users);
+    console.log(obj);
+    console.log(vasya.name);
+
+
+    //--------------------------
+    //--------------------------
+    let usersMapped = users.map(user => ({
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id
+    }));
+
+</script>

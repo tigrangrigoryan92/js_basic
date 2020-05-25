@@ -1,0 +1,22 @@
+{
+  "name": "node-youtube",
+  "version": "1.0.0",
+  "description": "NodeJS cours for youtube",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "node",
+    "nodejs"
+  ],
+  "author": "Tigran Grigoryan <info.grigoryan1992@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^2.4.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}

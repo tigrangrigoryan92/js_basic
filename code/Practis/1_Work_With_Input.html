@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<label for=""><input type="checkbox" id="one" onchange="func1()"> Check me</label>
+
+<hr>
+
+<input type="radio" value="1" name="rad"> 1
+<input type="radio" value="2" name="rad"> 2
+<input type="radio" value="3" name="rad"> 3
+<button onclick="func2()">Check</button>
+<script>
+
+    function func1() {
+        let one;
+        one = document.getElementById("one");
+        if (one.checked) {
+            console.log("Checked");
+        } else {
+            console.log("Did not checked");
+        }
+    }
+
+    function func2() {
+        let radio = document.getElementsByName("rad");
+        for (let i = 0; i < radio.length; i++) {
+            if (radio[i].checked) {
+                console.log(radio[i].value);
+            }
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

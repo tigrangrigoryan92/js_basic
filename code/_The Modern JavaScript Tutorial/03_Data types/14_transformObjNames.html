@@ -1,0 +1,18 @@
+<script>
+    let vasya = {name: "Vasya", age: 25};
+    let petya = {name: "Petya", age: 30};
+    let masha = {name: "Mahsa", age: 28};
+
+    let arr = [vasya, petya, masha];
+
+    function transformObjNames(arr) {
+        let result = [];
+        for (let obj of arr) {
+            result.push(obj.name);
+        }
+        return result;
+    }
+
+    let x = transformObjNames(arr);
+    console.log(x);
+</script>

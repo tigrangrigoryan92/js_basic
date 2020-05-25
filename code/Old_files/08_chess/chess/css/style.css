@@ -1,0 +1,73 @@
+#chessDesk {
+    margin: 20px auto;
+    width: 590px;
+    height: 590px;
+    border: 5px solid;
+}
+
+.box {
+    width: 70px;
+    height: 70px;
+    float: left;
+    position: relative;
+}
+
+.num {
+    width: 30px;
+    height: 70px;
+    text-align: center;
+    background-color: grey;
+    font-size: 25px;
+    color: white;
+}
+
+.white {
+    background-color: beige;
+}
+
+.brown {
+    background-color: saddlebrown;
+}
+
+.empoty {
+    height: 30px;
+    width: 30px;
+    background-color: grey
+}
+
+.lettors {
+    width: 70px;
+    height: 30px;
+    background-color: grey;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+}
+
+.box::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+input {
+    margin: 20px 0;
+    padding-left: 5px;
+}
+
+i {
+    color: burlywood;
+    position: absolute;
+    font-size: 50px;
+    left: 18px;
+    top: 10px;
+}
+
+span {
+    position: absolute;
+    top: 20px;
+    left: 8px;
+}
+.black {
+    color: black
+}

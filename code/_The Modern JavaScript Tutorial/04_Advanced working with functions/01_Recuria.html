@@ -1,0 +1,41 @@
+<script>
+    function sumTo(n) {
+         return n===1? 1 : n + sumTo(n-1);
+        //return n * (n +1 ) / 2
+    }
+    //onsole.log(sumTo(100));
+
+    function factorial(n) {
+        return n === 1 ? n : n * factorial(n-1);
+    }
+
+    //console.log(factorial(5));
+    let stack = {};
+    function fib(n) {
+        if (n > 1) {
+            return stack[n] || (stack[n] = fib(n-1) + fib(n-2));
+        }
+        return n;
+    }
+
+    // console.log(stack);
+    // console.log(fib(7));
+
+    let list = {
+        value: 1,
+        next: {
+            value: 2,
+            next: {
+                value: 3,
+                next: {
+                    value: 4,
+                    next: null
+                }
+            }
+        }
+    };
+
+    function printList(list) {
+        
+    }
+</script>

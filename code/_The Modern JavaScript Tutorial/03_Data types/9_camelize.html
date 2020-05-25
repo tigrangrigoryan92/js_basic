@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function camelize(str) {
+			let arr = str.split("-");
+            return arr.reduce((acc,item) => {
+                return acc += item[0].toUpperCase() + item.slice(1);
+            });
+		}
+
+        console.log(camelize("background-color"));
+        console.log(camelize("list-style-image"));
+        console.log(camelize("-webkit-transition"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .menu-item {
+            border: 2px solid;
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .menu-item .submenu {
+            height: 120px;
+            width: 120px;
+            background: green;
+            position: absolute;
+            cursor: pointer;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="nav">
+    <div class="menu-item">
+        Menu 1
+        <div class="submenu">
+            SubMenu 1
+        </div>
+    </div>
+    <div class="menu-item">
+        Menu 2
+        <div class="submenu">
+            SubMenu 2
+        </div>
+    </div>
+    <div class="menu-item">
+        Menu 3
+        <div class="submenu">
+            SubMenu 3
+        </div>
+    </div>
+</div>
+<script>
+    let nav = document.getElementById("nav");
+
+    nav.onmouseover = function (event) {
+        let target = event.target;
+        console.log(target)
+        console.log(event);
+        if (target.className === "menu-item") {
+            let arr = target.getElementsByClassName("submenu");
+            closeMenu();
+            arr[0].style.display = "block";
+        }
+    }
+
+    function closeMenu() {
+        let arr = document.getElementsByClassName("submenu");
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].style.display = "none";
+        }
+        
+    }
+</script>
+</body>
+</html>

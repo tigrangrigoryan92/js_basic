@@ -1,0 +1,13 @@
+* {
+    font-family: "Comic Sans MS";
+}
+h1 {
+    text-align: center;
+    color: crimson;
+}
+
+div {
+    padding: 10px 20px;
+    border: 5px solid green;
+    margin-bottom: 20px;
+}

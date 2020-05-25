@@ -1,0 +1,12 @@
+<script>
+    function box(w,h) {
+        const rn = "\r\n";
+        const tb = '*'.repeat(w) + rn;
+        const center = (w > 1) ? ("*" + " ".repeat(w-2) + "*" + rn).repeat(h-2) : " " ;
+        return h > 1 ? tb + center + tb : tb.repeat(h);
+    }
+
+    console.log(box(3, 3));
+    console.log(box(10,5));
+
+</script>

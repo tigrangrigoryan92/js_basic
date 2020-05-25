@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    let products = [
+        {
+            model : "iPhone XS",
+            company : "Apple"
+        },
+        {
+            model : "Galaxy S8",
+            company : "Samsung"
+        },
+        {
+            model : "Galaxy A7",
+            company : "Samsung"
+        },
+        {
+            model : "One Touch 2",
+            company : "Arcatel"
+        },
+        {
+            model : "iPhone 7",
+            company : "Apple"
+        },
+        {
+            model : "Honor 6",
+            company : "HTC"
+        },
+        {
+            model : "One Touch 2",
+            company : "Arcatel"
+        }
+    ];
+
+    function uniqObjVal(arr, key) {
+        let uniqObj = new Set();
+
+        arr.map(item => uniqObj.add(item[key]));
+
+        return uniqObj;
+    }
+
+    console.log(uniqObjVal(products, "company"));
+</script>
+</body>
+</html>

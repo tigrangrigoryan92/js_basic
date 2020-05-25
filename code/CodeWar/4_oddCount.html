@@ -1,0 +1,9 @@
+<script>
+    function f(arr,n) {
+        return arr.reduce((acc,cur) => {
+            acc+=cur;
+            return acc / arr.length < n
+        });
+    }
+    console.log(f([1, 3], 5));
+</script>

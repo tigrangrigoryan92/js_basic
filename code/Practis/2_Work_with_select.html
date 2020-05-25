@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    #test {
+        width: 20px;
+        height: 20px;
+        background: green;
+    }
+</style>
+<body>
+
+<select name="" id="mySelect" onchange="func1()">
+    <option value="100">Apple</option>
+    <option value="200">Banana</option>
+    <option value="300">Kiwi</option>
+    <option value="400">Orange</option>
+</select>
+
+<hr>
+
+<input type="range" id="range" oninput="func2()" min="0" max="100" step="5">
+<p id="p"></p>
+
+<hr>
+<div id="test"></div>
+<input type="range" id="range1" oninput="func3()" min="0" max="100" step="5">
+<script>
+    function func1() {
+        let sel = document.getElementById("mySelect").selectedIndex;
+        let options = document.getElementById("mySelect").options;
+        console.log(options[sel].text, options[sel].value);
+    }
+
+    function func2() {
+        let range = document.getElementById("range");
+        let p = document.getElementById("p");
+        p.innerHTML = range.value;
+    }
+
+    function func3() {
+        let range1 = document.getElementById("range1");
+        let test = document.getElementById("test");
+        test.style.width = range1.value + "px";
+    }
+</script>
+</body>
+</html>

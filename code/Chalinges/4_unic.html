@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+    function uniq(str) {
+        // Array
+        //-------------------------
+
+
+
+
+        // Object
+        //-------------------------
+        // let values = {};
+        //
+        // for (let letter of str) {
+        //     if (values[letter]) {
+        //         return false;
+        //     }
+        //     values[letter] = "exists";
+        // }
+        // return true;
+
+
+        // LastIndexOf
+        //-------------------------
+        // for (let i = 0; i < str.length; i++) {
+        //     if(str.lastIndexOf(str[i]) !== i) {
+        //         return false
+        //     }
+        // }
+        // return true;
+
+        // Object Set
+        // let tempStr = new Set();
+        // for (let i = 1; i < str.length; i++) {
+        //     tempStr.add(str[i]);
+        // }
+        // return tempStr.size === str.length-1;
+    }
+
+    console.log(uniq("abcdef"));
+    console.log(uniq("abcdefb"));
+</script>
+</body>
+</html>
